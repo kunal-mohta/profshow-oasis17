@@ -4,6 +4,9 @@ body,html {
 	overflow:hidden;
 }
 
+body{
+	background:#424242;
+}
 /*All animations start here*/
 @-webkit-keyframes scrollUpper{
 	0%{top:0vh;-webkit-transform:rotateZ(-20deg);}
@@ -43,8 +46,10 @@ body,html {
 	position:relative;
 	top:25vh;
 	left:15vw;
+	background:#272727;
+	box-shadow: rgba(0,0,0,0.35) 10px 10px 45px;
 
-	border:2px solid blue;
+
 }
 
 .artist-pic{
@@ -53,8 +58,9 @@ body,html {
 	position:relative;
 	top:5vh;
 	left:40vw;
+	background:#00c775;
+	box-shadow: rgba(0,0,0,0.35) 10px 10px 45px;
 
-	border:2px solid green;
 }
 
 .scroll-progress{
