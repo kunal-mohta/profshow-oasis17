@@ -28,7 +28,7 @@ body{
 	width:100vw;
 	display:flex;
 	overflow-y:hidden;
-	overflow-x:hidden;
+	overflow-x:scroll;
 
 	
 }
@@ -64,7 +64,21 @@ body{
 }
 
 .scroll-progress{
+	width:60vw;
+	height:5px;
+	position:fixed;
+	top:85vh;
+	left:20vw;
+}
 
+.incomplete{
+	background: #4a4b4c;
+}
+
+.complete{
+	width:0vw;
+	background: #00c775;
+	transition:width 1s;
 }
 
 
