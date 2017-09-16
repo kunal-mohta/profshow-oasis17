@@ -46,9 +46,10 @@ body{
 	position:relative;
 	top:25vh;
 	left:15vw;
-	background:#272727;
+	background:rgba(101,101,101,.8);   /*new*/
 	box-shadow: rgba(0,0,0,0.35) 10px 10px 45px;
-	-webkit-opacity:0.92;
+	z-index:1;		/*new*/
+
 }
 
 .artist-pic{
@@ -59,7 +60,7 @@ body{
 	left:40vw;
 	background:#00c775;
 	box-shadow: rgba(0,0,0,0.35) 10px 10px 45px;
-
+	z-index:1;		/*new*/
 }
 
 .scroll-progress{
@@ -80,6 +81,21 @@ body{
 	transition:width 1s;
 }
 
+.profshow{
+	background: rgba(128,128,128,.27);
+	width:100%;
+	height:20%;
+	top:35vh;
+	position:fixed;
+	right:0vh;
+}
+
+.close{
+	position: absolute;
+	top: 5%;
+	right:50%;
+	opacity:0;
+}
 
 @media only screen and (min-width : 1000px){
 	
@@ -92,20 +108,23 @@ body{
 	@-webkit-keyframes scrollLower{
 		0%{top:35vh;-webkit-transform:rotateZ(20deg);}
 		90%{-webkit-transform:rotateZ(0deg);}
-		100%{position:relative;top:10vh;-webkit-transform:rotateZ(0deg);}
+		100%{position:relative;top:3vh;-webkit-transform:rotateZ(0deg);}
 	}
 
 	.artist-info{
-		height:40vh;
+		height:35vh;
 		width:40vw;
 		left:30vw;
+		transition:height .3s ease-out,width .3s ease-out,top .3s ease-out;
 	}
 
 	.artist-pic{
-		height:20vh;
+		height:32vh;
 		width:29vw;
-		top:10vh;
-		left:45vw;
+		top:3vh;
+		left:50vw;
+		transition:transform .3s ease-out;
+		transition-delay:.3s;
 	}
 
 }

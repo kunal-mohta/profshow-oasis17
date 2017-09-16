@@ -58,58 +58,7 @@ $(document).ready(function(){
         //$('#main-wrapper').mousewheel(function(e,delta){return false;})
 
     });
-    /*var k = 0;
-	$('#main-wrapper').on("scroll", function(){
-        if(animationrunning<0){return false;}
-
-        else{
-            if(this.scrollLeft<k){
-                if(counter <= 0){}
-
-                    else{
-                        animationrunning--;
-                        console.log(animationrunning);
-                        $('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(counter-1)},1000);
-
-                        var a = document.getElementsByClassName("artist-info")[counter];
-                        a.style.webkitAnimation = "scrollUpper 1s linear reverse";
-                        console.log(animationrunning);
-                        a.addEventListener('webkitAnimationEnd', function(){a.style.webkitAnimation = ""; console.log(animationrunning);}, false);
-                        var b = document.getElementsByClassName("artist-pic")[counter];
-                        b.style.webkitAnimation = "scrollLower 1s linear reverse";
-                        b.addEventListener('webkitAnimationEnd', function(){b.style.webkitAnimation = ""}, false);
-                    counter--;
-                    }
-
-                    scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
-            }
-            
-            else if(this.scrollLeft > k){
-                if(counter >= (artistCount-1)){}
-
-                    else{
-                        animationrunning--;
-
-                        $('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(counter+1)},1000);
-
-                        var x = document.getElementsByClassName("artist-info")[counter+1];
-                        x.style.webkitAnimation = "scrollUpper 1s linear";
-                        x.addEventListener('webkitAnimationEnd', function(){x.style.webkitAnimation = ""; animationrunning++;}, false);
-
-                        var y = document.getElementsByClassName("artist-pic")[counter+1];
-                        y.style.webkitAnimation = "scrollLower 1s linear";
-                        y.addEventListener('webkitAnimationEnd', function(){y.style.webkitAnimation = ""}, false);
-
-                        counter++;
-                    }
-
-                    scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
-            }
-
-
-            k = this.scrollLeft;
-        }
-	});*/
+   
 	var x1;
 	document.body.addEventListener("touchstart", function(e){
 		x1 = e.changedTouches[0].pageX;
@@ -216,6 +165,31 @@ $(document).ready(function(){
         }
     }
 
+    });
+
+    $('.artist-info').on('click',function(){
+    this.style.height = "70vh";
+    this.style.width = "48vw";
+    this.style.top="10%";
+    var parent = this.parentNode;
+    var infoPic = parent.childNodes[3];
+    infoPic.style.transform="translateY(-65vh)";
+    var x = document.getElementsByClassName("close")[0];
+    x.style.opacity="100";
+    animationrunning=-1;
+    });
+
+    $('.close').on('click',function(){
+    animationrunning=0;
+    this.style.opacity="0";
+    for(i=0;i<artistCount;i++)
+    {   var x = document.getElementsByClassName("artist-info")[i];
+        x.style.height="35vh";
+        x.style.top="25%";
+        x.style.width="40vw";
+        var y = document.getElementsByClassName("artist-pic")[i];
+        y.style.transform="translateY(0vh)";
+    }
     });
 
 });
