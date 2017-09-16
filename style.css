@@ -28,7 +28,7 @@ body{
 	width:100vw;
 	display:flex;
 	overflow-y:hidden;
-	overflow-x:scroll;
+	overflow-x:hidden;
 
 	
 }
@@ -48,8 +48,7 @@ body{
 	left:15vw;
 	background:#272727;
 	box-shadow: rgba(0,0,0,0.35) 10px 10px 45px;
-
-
+	-webkit-opacity:0.92;
 }
 
 .artist-pic{
