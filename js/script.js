@@ -173,7 +173,7 @@ $(document).ready(function(){
     this.style.top="10%";
     var parent = this.parentNode;
     var infoPic = parent.childNodes[3];
-    infoPic.style.transform="translateY(-65vh)";
+    infoPic.style.transform="translateY(-83vh)";
     var x = document.getElementsByClassName("close")[0];
     x.style.opacity="100";
     animationrunning=-1;

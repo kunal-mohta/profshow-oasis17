@@ -7,6 +7,11 @@ body,html {
 body{
 	background:#424242;
 }
+@font-face{
+	font-family: 'i_light';
+	src:url('fonts/Ikaros-Light.otf') format('opentype');
+
+}
 /*All animations start here*/
 @-webkit-keyframes scrollUpper{
 	0%{top:0vh;-webkit-transform:rotateZ(-20deg);}
@@ -41,11 +46,11 @@ body{
 }
 
 .artist-info{
-	height:50vh;
-	width:70vw;
+	height:30vh;
+	width:75vw;
 	position:relative;
-	top:25vh;
-	left:15vw;
+	top:33vh;
+	left:7vw;
 	background:rgba(101,101,101,.8);   /*new*/
 	box-shadow: rgba(0,0,0,0.35) 10px 10px 45px;
 	z-index:1;		/*new*/
@@ -53,11 +58,11 @@ body{
 }
 
 .artist-pic{
-	height:25vh;
+	height:20vh;
 	width:50vw;
 	position:relative;
-	top:5vh;
-	left:40vw;
+	top:22vh;
+	left:45vw;
 	background:#00c775;
 	box-shadow: rgba(0,0,0,0.35) 10px 10px 45px;
 	z-index:1;		/*new*/
@@ -81,23 +86,49 @@ body{
 	transition:width 1s;
 }
 
+.toolbar{
+	background: rgba(128,128,128,.27);
+	height: 8%;
+	position: fixed;
+	width: 100%;
+	top: 6vh;
+	display: flex;
+	justify-content: space-around;
+	/*align-content: space-around;*/
+
+}
+
+.tools{
+	align-self: center;
+	font-size: 3vh;
+	color: white;
+}
+
 .profshow{
 	background: rgba(128,128,128,.27);
 	width:100%;
-	height:20%;
-	top:35vh;
+	height:57%;
+	top:22vh;
 	position:fixed;
 	right:0vh;
 }
 
 .close{
 	position: absolute;
+	color: white;
 	top: 5%;
 	right:50%;
 	opacity:0;
+
 }
 
-@media only screen and (min-width : 1000px){
+.close:hover{
+	color: red;
+}
+
+/*for laptop screen*/
+
+@media only screen and (min-width : 1025px){
 	
 	@-webkit-keyframes scrollUpper{
 		0%{top:-10vh;-webkit-transform:rotateZ(-20deg);}
@@ -116,15 +147,98 @@ body{
 		width:40vw;
 		left:30vw;
 		transition:height .3s ease-out,width .3s ease-out,top .3s ease-out;
+		display: flex;
+		flex-direction: column;
+		color: white;
+	}
+
+	.artist-desc{
+		margin: 7% 5%;
+		font-size: 140%;
+		font-family: 'i_light';
+		
+	}
+
+	.artist-name{
+		margin: 0% 5%;
+		font-size: 210%;
+		font-family: 'i_light';
+		
+	}
+
+	.venue{
+
+		margin: 3% 5%;
+		font-size: 140%;
+		font-family: 'i_light';
+		
 	}
 
 	.artist-pic{
-		height:32vh;
+		height:20vh;
 		width:29vw;
-		top:3vh;
+		top:20vh;
 		left:50vw;
 		transition:transform .3s ease-out;
 		transition-delay:.3s;
 	}
+
+	.nav{
+		width:20vw;
+		height: 100vh;
+		color:white;
+		z-index: 3;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	.show-artists{
+		position: fixed;
+		margin-top:50%;
+		margin-left: 3%;
+		font-size: 160%;
+		transition-property: color , font-size;
+		transition-duration: 0.1s;
+	}
+
+	.show-artists:hover{
+		color: red;
+		font-size: 150%;
+
+	}
+	@-webkit-keyframes appear{
+		from{ opacity: 0; transform: translateX(-20%); } 
+		to{ opacity: 1; transform: translateX(0); }
+	}
+
+	.artist{
+		display: flex;
+		flex-direction: column;
+		margin-top: 160%;
+		margin-left: 35%;
+		font-size: 140%;
+		-webkit-animation:appear 1s;
+	}
+
+	.toolbar{
+		height: 0%;
+	}
+
+
+	.profshow{
+		background: rgba(128,128,128,.27);
+		width:100%;
+		height:43%;
+		top:28vh;
+		position:fixed;
+		right:0vh;
+	}
+	
+	.tools{
+		opacity: 0;
+	}
+
+
 
 }
