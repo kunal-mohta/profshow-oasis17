@@ -5,12 +5,16 @@ body,html {
 }
 
 body{
-	background:#424242;
+	background:#292b28;
 }
 @font-face{
 	font-family: 'i_light';
 	src:url('fonts/Ikaros-Light.otf') format('opentype');
 
+}
+
+span,div{
+	cursor: default;
 }
 /*All animations start here*/
 @-webkit-keyframes scrollUpper{
@@ -51,9 +55,12 @@ body{
 	position:relative;
 	top:33vh;
 	left:7vw;
-	background:rgba(101,101,101,.8);   /*new*/
+	background:rgba(101,101,101,.6);   /*new*/
 	box-shadow: rgba(0,0,0,0.35) 10px 10px 45px;
 	z-index:1;		/*new*/
+	display: flex;
+	flex-direction: column;
+	color: white;
 
 }
 
@@ -82,12 +89,12 @@ body{
 
 .complete{
 	width:0vw;
-	background: #00c775;
+	background: #57e7c7;
 	transition:width 1s;
 }
 
 .toolbar{
-	background: rgba(128,128,128,.27);
+	background: #292b28;
 	height: 8%;
 	position: fixed;
 	width: 100%;
@@ -107,8 +114,8 @@ body{
 .profshow{
 	background: rgba(128,128,128,.27);
 	width:100%;
-	height:57%;
-	top:22vh;
+	height:26%;
+	top:35vh;
 	position:fixed;
 	right:0vh;
 }
@@ -125,6 +132,43 @@ body{
 .close:hover{
 	color: red;
 }
+
+
+	.artist-desc{
+		margin: 7% 5%;
+		font-size: 40px;
+		font-family: 'i_light';
+		
+	}
+
+	.artist-name{
+		margin: 0% 5%;
+		font-size: 50px;
+		
+		font-family: 'i_light';
+		color: #70c5b0;
+		
+	}
+
+	.venue{
+
+		margin: 3% 5%;
+		font-size: 35px;
+		font-family: 'i_light';
+		
+	}
+
+
+	.discover-more{
+		margin: -2% 5%;
+		font-size: 28px;
+		font-family: 'i_light';
+		color: #8fa3a7;
+	}
+	
+	.discover-more:hover{
+		color:#70c5b0;
+	}
 
 /*for laptop screen*/
 
@@ -143,9 +187,10 @@ body{
 	}
 
 	.artist-info{
-		height:35vh;
-		width:40vw;
-		left:30vw;
+		height:40vh;
+		width:45vw;
+		left:25vw;
+		top:30vh;
 		transition:height .3s ease-out,width .3s ease-out,top .3s ease-out;
 		display: flex;
 		flex-direction: column;
@@ -163,6 +208,7 @@ body{
 		margin: 0% 5%;
 		font-size: 210%;
 		font-family: 'i_light';
+		color: #70c5b0;
 		
 	}
 
@@ -174,10 +220,17 @@ body{
 		
 	}
 
+	.discover-more{
+		margin: -2% 5%;
+		font-size: 110%;
+		font-family: 'i_light';
+		color: #8fa3a7;
+	}
+
 	.artist-pic{
-		height:20vh;
+		height:33vh;
 		width:29vw;
-		top:20vh;
+		top:4vh;
 		left:50vw;
 		transition:transform .3s ease-out;
 		transition-delay:.3s;
@@ -203,7 +256,7 @@ body{
 	}
 
 	.show-artists:hover{
-		color: red;
+		color: #70c5b0;
 		font-size: 150%;
 
 	}
@@ -214,29 +267,40 @@ body{
 
 	.artist{
 		display: flex;
+		position: fixed;
+		top: 42vh;
+		left: 5vw;
 		flex-direction: column;
-		margin-top: 160%;
-		margin-left: 35%;
+/*		margin-top: 115%;
+		margin-left: 35%;*/
 		font-size: 140%;
 		-webkit-animation:appear 1s;
 	}
 
 	.toolbar{
-		height: 0%;
+		height: 10%;
+		width: 50%;
+		background: #292b28;
+		top: 0vh;
+		left: 50vw;
+		position: fixed;
 	}
 
 
 	.profshow{
 		background: rgba(128,128,128,.27);
 		width:100%;
-		height:43%;
-		top:28vh;
+		height:36%;
+		top:32vh;
 		position:fixed;
 		right:0vh;
 	}
 	
 	.tools{
-		opacity: 0;
+		opacity: 1;
+		color: white;
+		align-self: center;
+
 	}
 
 
