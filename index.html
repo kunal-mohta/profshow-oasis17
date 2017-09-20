@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title></title>
-
+	
+	<meta name = "viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body autofocus>
@@ -62,11 +63,11 @@
 	<div class="nav">
 		<span class="show-artists">Show Artists</span>
 		<div class="artist">
-			<span class="name">Artist</span>
-			<span class="name">Artist</span>
-			<span class="name">Artist</span>
-			<span class="name">Artist</span>
-			<span class="name">Artist</span>
+			<span class="name" onclick = "slide(1)">Yash Bhagat</span>
+			<span class="name" onclick = "slide(2)">Yash Bhagat</span>
+			<span class="name" onclick = "slide(3)">Yash Bhagat</span>
+			<span class="name" onclick = "slide(4)">Yash Bhagat</span>
+			<span class="name" onclick = "slide(5)">Yash Bhagat</span>
 		</div>
 	</div>
 
@@ -74,15 +75,17 @@
 	<div class = "scroll-progress complete"></div>
 
 	<div class="toolbar">
-		<span class="tools">Artists</span>
-		<span class="tools">Schedule</span>
-		<span class="tools">Contact Us</span>
+		<span class="tools a">ARTISTS</span>
+		<span class="tools s">SCHEDULE</span>
+		<span class="tools c">CONTACT US</span>
 	</div>
 
-	<div class= "profshow"></div>
+	<div class= "profshow"><center><span id = "prof-text">PROFSHOW</span></center></div>
 
 	<div class="close">close</div>
 	
+	<div class = "above" id = "schedule"></div>
+	<div class = "above" id = "contact-us"></div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/jquery.mousewheel.min.js"></script>
