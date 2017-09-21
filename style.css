@@ -111,7 +111,10 @@ span,div{
 	position:relative;
 	top:22vh;
 	left:45vw;
-	background:#00c775;
+	background:#00c775 url('a1.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	box-shadow: rgba(0,0,0,0.35) 10px 10px 45px;
 	z-index:1;		
 	transition:transform .3s ease-out;
@@ -173,16 +176,12 @@ span,div{
 	opacity: 0;
 }
 .close{
-	position: absolute;
-	color: white;
-	top: 18vh;
-	right:50%;
-	opacity:0;
-	z-index:2;
-}
-
-.close:hover{
-	color: red;
+	position:absolute;
+	z-index:3;
+	display: none;
+	top:25vh;
+	left:10vw;
+	transition:opacity 1s;
 }
 
 
@@ -221,11 +220,9 @@ span,div{
 	.discover-more:hover{
 		color:#70c5b0;
 	}
-
+	
 	.name{
 		position:relative;
-		left:-4vw;
-		top:-10vh;
 		opacity:0;
 		color:#70c5b0;
 	}
@@ -244,7 +241,7 @@ span,div{
 		transition:top 0.5s ease-out;
 	}
 
-
+	
 @media only screen and (min-width : 800px), screen and (orientation:landscape){
 	
 	@-webkit-keyframes scrollUpper{
@@ -370,8 +367,8 @@ span,div{
 	.artist{
 		display: flex;
 		position: fixed;
-		top: 42vh;
-		left: 5vw;
+		top: 30vh;
+		left: 2vw;
 		flex-direction: column;
 		font-size: 140%;
 	}
@@ -404,13 +401,13 @@ span,div{
 	}
 
 	.close{
-	position: absolute;
-	color: white;
-	top: 5vh;
-	right:50%;
-	opacity:0;
-
-	}
+	position:absolute;
+	z-index:3;
+	display: none;
+	top:10vh;
+	left:25vw;
+	transition:opacity 1s;
+}
 
 }
 

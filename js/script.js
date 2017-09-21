@@ -291,7 +291,7 @@ $(document).ready(function(){
         infoPic.style.webkitTransform="translateY(-60vh)";
         infoPic.style.mozTransform="translateY(-60vh)";
         var x = document.getElementsByClassName("close")[0];
-        x.style.opacity="100";
+        x.style.display="block";
         animationrunning=-1;
     }
     else{
@@ -300,11 +300,11 @@ $(document).ready(function(){
         this.style.top="25%";
         var parent = this.parentNode;
         var infoPic = parent.childNodes[3];
-        infoPic.style.transform="translateY(-50vh)";
-        infoPic.style.webkitTransform="translateY(-50vh)";
-        infoPic.style.mozTransform="translateY(-50vh)";
+        infoPic.style.transform="translateY(-55vh)";
+        infoPic.style.webkitTransform="translateY(-55vh)";
+        infoPic.style.mozTransform="translateY(-55vh)";
         var x = document.getElementsByClassName("close")[0];
-        x.style.opacity="100";
+        x.style.display="block";
         animationrunning=-1;
     }
     });
@@ -312,7 +312,7 @@ $(document).ready(function(){
     $('.close').on('click',function(){
     if(screen.width >= 1025 || (window.matchMedia("(orientation: landscape)").matches)){
         animationrunning=0;
-        this.style.opacity="0";
+        this.style.display="none";
         for(i=0;i<artistCount;i++)
         {   var x = document.getElementsByClassName("artist-info")[i];
             x.style.height="40vh";
@@ -326,7 +326,7 @@ $(document).ready(function(){
     }
     else{
         animationrunning=0;
-        this.style.opacity="0";
+        this.style.display="none";
         for(i=0;i<artistCount;i++)
         {   var x = document.getElementsByClassName("artist-info")[i];
             x.style.height="30vh";
@@ -374,6 +374,14 @@ $(document).ready(function(){
 
     $('.c').on('click',function(){
         document.getElementById("contact-us").style.top = "-10vh";
+    });
+
+    $('.schedule-close').on('click',function(){
+        $('#schedule').css("top","-100vh");
+    });
+
+    $('.contact-close').on('click',function(){
+        $('#contact-us').css("top","-100vh");
     });
 });
     

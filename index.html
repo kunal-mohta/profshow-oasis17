@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Prof Shows | OASIS 2017</title>
 	
 	<meta name = "viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="style.css">
@@ -11,15 +11,15 @@
 	<div id="main-wrapper">
 		
 		<div class="artist-wrap a1">
-			<div class="artist-info">
-				<span class="artist-desc">Random text</span>
-				<span class="artist-name">Artist's name</span>
-				<span class="venue">Venue and date</span>
+			<div class="artist-info">	
+				<span class="artist-desc">Music Duo</span>
+				<span class="artist-name">Vishal - Shekhar</span>
+				<span class="venue">To be <br>Announced</span>
 				<span class="discover-more"> discover more</span>
 			</div>
 			<div class="artist-pic"></div>
 		</div>
-
+		<!--
 		<div class="artist-wrap a2">
 			<div class="artist-info animating-a">
 				<span class="artist-desc">Random text</span>
@@ -58,34 +58,30 @@
 			</div>
 			<div class="artist-pic animating-b"></div>
 		</div>
-
+		-->
 	</div>
 	<div class="nav">
 		<span class="show-artists">Show Artists</span>
 		<div class="artist">
-			<span class="name" onclick = "slide(1)">Yash Bhagat</span>
-			<span class="name" onclick = "slide(2)">Yash Bhagat</span>
-			<span class="name" onclick = "slide(3)">Yash Bhagat</span>
-			<span class="name" onclick = "slide(4)">Yash Bhagat</span>
-			<span class="name" onclick = "slide(5)">Yash Bhagat</span>
+			<span class="name" onclick = "slide(1)">Vishal - Shekhar</span>
 		</div>
 	</div>
 
 	<div class = "scroll-progress incomplete"></div>
 	<div class = "scroll-progress complete"></div>
 
-	<div class="toolbar">
+	<div class="toolbar" style = "display: none;">
 		<span class="tools a">ARTISTS</span>
 		<span class="tools s">SCHEDULE</span>
 		<span class="tools c">CONTACT US</span>
 	</div>
 
-	<div class= "profshow"><center><span id = "prof-text">PROFSHOW</span></center></div>
+	<div class= "profshow"><center><span id = "prof-text">PROF SHOW</span></center></div>
 
-	<div class="close">close</div>
+	<div class="close"><img src = "icons/close.svg"></img></div>
 	
-	<div class = "above" id = "schedule"></div>
-	<div class = "above" id = "contact-us"></div>
+	<div class = "above" id = "schedule"><img class = "schedule-close" src = "icons/close.svg" style = "position:absolute;top:10vh;"></img></div>
+	<div class = "above" id = "contact-us"><img class = "contact-close" src = "icons/close.svg" style = "position:absolute;top:10vh;"></img></div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/jquery.mousewheel.min.js"></script>
