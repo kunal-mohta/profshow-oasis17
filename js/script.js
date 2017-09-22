@@ -309,7 +309,11 @@ $(document).ready(function(){
     }
     });
 
-    $('.close').on('click',function(){
+    $('.close').on('click',function(e){
+        //prevent the call of external div click funtion and give priority to inside div click event
+        if (!e) var e = window.event;
+        if (e.stopPropagation) e.stopPropagation();
+
     if(screen.width >= 1025 || (window.matchMedia("(orientation: landscape)").matches)){
         animationrunning=0;
         this.style.display="none";
@@ -329,7 +333,7 @@ $(document).ready(function(){
         this.style.display="none";
         for(i=0;i<artistCount;i++)
         {   var x = document.getElementsByClassName("artist-info")[i];
-            x.style.height="30vh";
+            x.style.height="40vh";
             x.style.top="33vh";
             x.style.width="75vw";
             var y = document.getElementsByClassName("artist-pic")[i];

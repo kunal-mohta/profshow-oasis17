@@ -22,6 +22,31 @@ span,div{
 	cursor: default;
 }
 
+#logo{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:4;
+	height:9.6vh;
+	width:8vh;
+	background: url('images/logo.png');
+	background-size: cover;
+	margin:0 0 0 7vh;
+
+	display:none;
+}
+
+#post-logo{
+	position:fixed;
+	top:9.6vh;
+	height:10vh;
+	width:23vh;
+	z-index:4;	
+	color:white;
+
+	display:none;
+}
+
 @-webkit-keyframes scrollUpper{
 	0%{top:0vh;-webkit-transform:rotateZ(-20deg);}
 	90%{-webkit-transform:rotateZ(0deg);}
@@ -111,10 +136,7 @@ span,div{
 	position:relative;
 	top:22vh;
 	left:45vw;
-	background:#00c775 url('a1.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+	background:#00c775;
 	box-shadow: rgba(0,0,0,0.35) 10px 10px 45px;
 	z-index:1;		
 	transition:transform .3s ease-out;
@@ -176,24 +198,19 @@ span,div{
 	opacity: 0;
 }
 .close{
-	position:absolute;
-	z-index:3;
 	display: none;
-	top:25vh;
-	left:10vw;
 	transition:opacity 1s;
 }
 
 
 	.artist-desc{
-		margin: 7% 5%;
+		margin: 3vh 0% 0% 2vw;
 		font-size: 20px;
 		font-family: 'i_light';
-		
 	}
 
 	.artist-name{
-		margin: 0% 5%;
+		margin: 0% 0% 0% 2vw;
 		font-size: 30px;
 		
 		font-family: 'i_light';
@@ -203,7 +220,7 @@ span,div{
 
 	.venue{
 
-		margin: 3% 5%;
+		margin: 3vh 0% 0% 2vw;
 		font-size: 25px;
 		font-family: 'i_light';
 		
@@ -211,7 +228,7 @@ span,div{
 
 
 	.discover-more{
-		margin: -2% 5%;
+		margin: 0% 0% 0% 2vw;
 		font-size: 15px;
 		font-family: 'i_light';
 		color: #8fa3a7;
@@ -244,6 +261,31 @@ span,div{
 	
 @media only screen and (min-width : 800px), screen and (orientation:landscape){
 	
+	#logo{
+	position:fixed;
+		top:0;
+		left:0;
+		z-index:4;
+		height:12vh;
+		width:10vh;
+		background: url('images/logo.png');
+		background-size: cover;
+		margin:5vh 0 0 7vh;
+
+		display: block;
+	}
+
+	#post-logo{
+		position:fixed;
+		top:17vh;
+		height:10vh;
+		width:23vh;
+		z-index:4;	
+		color:white;
+
+		display:block;
+	}
+
 	@-webkit-keyframes scrollUpper{
 		0%{top:-10vh;-webkit-transform:rotateZ(-20deg);}
 		90%{-webkit-transform:rotateZ(0deg);}
@@ -253,7 +295,7 @@ span,div{
 	@-webkit-keyframes scrollLower{
 		0%{top:35vh;-webkit-transform:rotateZ(20deg);}
 		90%{-webkit-transform:rotateZ(0deg);}
-		100%{position:relative;top:4vh;-webkit-transform:rotateZ(0deg);}
+		100%{position:relative;top:8vh;-webkit-transform:rotateZ(0deg);}
 	}
 
 	@-moz-keyframes scrollUpper{
@@ -265,7 +307,7 @@ span,div{
 	@-moz-keyframes scrollLower{
 		0%{top:35vh;-moz-transform:rotateZ(20deg);}
 		90%{-moz-transform:rotateZ(0deg);}
-		100%{position:relative;top:4vh;-moz-transform:rotateZ(0deg);}
+		100%{position:relative;top:8vh;-moz-transform:rotateZ(0deg);}
 	}
 	@keyframes scrollUpper{
 		0%{top:-10vh;transform:rotateZ(-20deg);}
@@ -276,7 +318,7 @@ span,div{
 	@keyframes scrollLower{
 		0%{top:35vh;transform:rotateZ(20deg);}
 		90%{transform:rotateZ(0deg);}
-		100%{position:relative;top:4vh;transform:rotateZ(0deg);}
+		100%{position:relative;top:8vh;transform:rotateZ(0deg);}
 	}
 
 	.artist-info{
@@ -291,14 +333,14 @@ span,div{
 	}
 
 	.artist-desc{
-		margin: 7% 5%;
+		/*margin: 7% 5%;*/
 		font-size: 140%;
 		font-family: 'i_light';
 		
 	}
 
 	.artist-name{
-		margin: 0% 5%;
+		/*margin: 0% 5%;*/
 		font-size: 210%;
 		font-family: 'i_light';
 		color: #70c5b0;
@@ -307,14 +349,14 @@ span,div{
 
 	.venue{
 
-		margin: 3% 5%;
+		/*margin: 3% 5%;*/
 		font-size: 140%;
 		font-family: 'i_light';
 		
 	}
 
 	.discover-more{
-		margin: -2% 5%;
+		/*margin: -2% 5%;*/
 		font-size: 110%;
 		font-family: 'i_light';
 		color: #8fa3a7;
@@ -323,7 +365,7 @@ span,div{
 	.artist-pic{
 		height:33vh;
 		width:29vw;
-		top:4vh;
+		top:8vh;
 		left:50vw;
 		transition:transform .3s ease-out;
 	}
@@ -390,7 +432,7 @@ span,div{
 		top:32vh;
 		position:fixed;
 		right:0vh;
-		font-size: 20vh;
+		font-size: 17vh;
 	}
 	
 	.tools{
@@ -400,28 +442,19 @@ span,div{
 
 	}
 
-	.close{
-	position:absolute;
-	z-index:3;
-	display: none;
-	top:10vh;
-	left:25vw;
-	transition:opacity 1s;
-}
-
 }
 
 
 @media only screen and (orientation:landscape){
 	.artist-desc{
-		margin: 7% 5%;
+		/*margin: 7% 5%;*/
 		font-size: 100%;
 		font-family: 'i_light';
 		
 	}
 
 	.artist-name{
-		margin: 0% 5%;
+		/*margin: 0% 5%;*/
 		font-size: 150%;
 		font-family: 'i_light';
 		color: #70c5b0;
@@ -430,14 +463,14 @@ span,div{
 
 	.venue{
 
-		margin: 3% 5%;
+		/*margin: 3% 5%;*/
 		font-size: 100%;
 		font-family: 'i_light';
 		
 	}
 
 	.discover-more{
-		margin: -2% 5%;
+		/*margin: -2% 5%;*/
 		font-size: 80%;
 		font-family: 'i_light';
 		color: #8fa3a7;
