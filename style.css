@@ -3,6 +3,11 @@ body,html {
 	margin:0;
 	overflow:hidden;
 }
+
+::-webkit-scrollbar{
+	display:none;
+}
+
 @font-face{
 	font-family: 'i_light';
 	src:url('fonts/Ikaros-Light.otf') format('opentype');
@@ -63,6 +68,11 @@ span,div{
 	to{opacity:1;}
 }
 
+@-webkit-keyframes moreinfo{
+	from{display:none;}
+	to{display:block;}
+}
+
 @-moz-keyframes scrollUpper{
 	0%{top:0vh;-moz-transform:rotateZ(-20deg);}
 	90%{-moz-transform:rotateZ(0deg);}
@@ -77,6 +87,11 @@ span,div{
 @-moz-keyframes afterload{
 	from{opacity:0;}
 	to{opacity:1;}
+}
+
+@-moz-keyframes moreinfo{
+	from{display:none;}
+	to{display:block;}
 }
 
 @keyframes scrollUpper{
@@ -95,6 +110,10 @@ span,div{
 	to{opacity:1;}
 }
 
+@keyframes moreinfo{
+	from{display:none;}
+	to{display:block;}
+}
 
 #main-wrapper{
 	height:100vh;
@@ -128,6 +147,13 @@ span,div{
 	flex-direction: column;
 	color: white;
 	transition:height .3s ease-out,width .3s ease-out,top .3s ease-out;
+	overflow-y: scroll;
+}
+
+.more-info{
+	width: 50%;
+	display:none;
+	margin: 3vh 0% 0% 2vw;
 }
 
 .artist-pic{
@@ -198,7 +224,7 @@ span,div{
 	opacity: 0;
 }
 .close{
-	display: none;
+	display: none;	
 	transition:opacity 1s;
 }
 
@@ -241,11 +267,15 @@ span,div{
 	.name{
 		position:relative;
 		opacity:0;
+		color:#347f6c;
+	}
+	
+	.name:nth-child(1){
 		color:#70c5b0;
 	}
 
 	.name:hover{
-		color:#347f6c;
+		color:#70c5b0;
 	}
 
 	.above{
@@ -258,6 +288,8 @@ span,div{
 		transition:top 0.5s ease-out;
 	}
 
+
+	
 	
 @media only screen and (min-width : 800px), screen and (orientation:landscape){
 	
@@ -446,6 +478,10 @@ span,div{
 
 
 @media only screen and (orientation:landscape){
+	.artist-pic{
+		left:55vw;
+	}
+
 	.artist-desc{
 		/*margin: 7% 5%;*/
 		font-size: 100%;

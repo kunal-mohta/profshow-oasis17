@@ -112,7 +112,8 @@ $(document).ready(function(){
 
     document.body.addEventListener("touchend", function(e){
         var delta = e.changedTouches[0].pageX - x1;
-
+        if(animationrunning<0){return false;}
+        
         if(delta > 0){
 			if(counter <= 0){return false;}
 
@@ -293,6 +294,10 @@ $(document).ready(function(){
         var x = document.getElementsByClassName("close")[0];
         x.style.display="block";
         animationrunning=-1;
+
+        for(i=0;i<artistCount;i++){
+            document.getElementsByClassName("more-info")[i].style.display = "block";
+        }           
     }
     else{
         this.style.height = "50vh";
@@ -306,6 +311,10 @@ $(document).ready(function(){
         var x = document.getElementsByClassName("close")[0];
         x.style.display="block";
         animationrunning=-1;
+
+        for(i=0;i<artistCount;i++){
+            document.getElementsByClassName("more-info")[i].style.display = "block";
+        }
     }
     });
 
@@ -326,6 +335,8 @@ $(document).ready(function(){
             y.style.transform="translateY(0vh)";
             y.style.webkitTransform="translateY(0vh)";
             y.style.mozTransform="translateY(0vh)";
+
+            document.getElementsByClassName("more-info")[i].style.display = "none";
         }
     }
     else{
@@ -340,6 +351,8 @@ $(document).ready(function(){
             y.style.transform="translateY(0vh)";
             y.style.webkitTransform="translateY(0vh)";
             y.style.mozTransform="translateY(0vh)";
+
+            document.getElementsByClassName("more-info")[i].style.display = "none";
         }
     }
     });
@@ -359,7 +372,7 @@ $(document).ready(function(){
 
     $('.name').on('click',function(){
         this.id = "temp";
-
+        $('.name').css('color','#347f6c');
         for(i=0;i<artistCount;i++){
             if(document.getElementsByClassName("name")[i].id == "temp"){
                 break;
@@ -370,7 +383,12 @@ $(document).ready(function(){
         this.removeAttribute("id");
         counter = i;
         scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
+        document.getElementsByClassName("name")[i].style.color = "#70c5b0";
     }); 
+
+    $('.a').on('click',function(){
+        document.getElementById("artists").style.top = "-10vh";
+    });
 
     $('.s').on('click',function(){
         document.getElementById("schedule").style.top = "-10vh";
@@ -380,12 +398,16 @@ $(document).ready(function(){
         document.getElementById("contact-us").style.top = "-10vh";
     });
 
+    $('.artist-close').on('click',function(){
+        document.getElementById("artists").style.top = "-100vh";
+    });
+
     $('.schedule-close').on('click',function(){
-        $('#schedule').css("top","-100vh");
+        document.getElementById("schedule").style.top = "-100vh";
     });
 
     $('.contact-close').on('click',function(){
-        $('#contact-us').css("top","-100vh");
+        document.getElementById("contact-us").style.top = "-100vh";
     });
 });
     

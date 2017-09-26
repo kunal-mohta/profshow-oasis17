@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Prof Show | OASIS 2017</title>
+	<title>Prof Show | OASIS 2017 | BITS Pilani</title>
 	
-	<meta name = "viewport" content="width=device-width,initial-scale=1">
+	
+	<meta name = "viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta charset="utf-8">	
+	<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="index, follow">
+	<meta http-equiv="content-language" content=EN>
+	<meta name="copyright" content="Copyright Â© 2017 Department Of Visual Media, BITS Pilani">
+	<meta name="author" content="Department Of Visual Media, BITS Pilani">
+	<meta property="og:title" content="Prof Show | OASIS 2017 | BITS Pilani">
+	<meta property="og:site_name" content="Prof Show">
+
 	<link rel="stylesheet" href="style.css">
 </head>
 <body autofocus>
@@ -19,15 +29,16 @@
 		
 		<div class="artist-wrap a1">
 			<div class="artist-info">	
-			<div class="close" style = "left:0;"><img src = "icons/close.svg"></img></div>
+				<div class="close" style = "left:0;"><img src = "icons/close.svg"></img></div>
 				<span class="artist-desc">Music Duo</span>
 				<span class="artist-name">Vishal - Shekhar</span>
 				<span class="venue">To be <br>Announced</span>
 				<span class="discover-more"> discover more</span>
+
+				<div class="more-info">Random text<br>Random text<br>Random text<br>Random text<br>Random text<br>Random text<br></div>
 			</div>
 			<div class="artist-pic" style = "background: url('images/vishal.png'); background-size:cover; "></div>
 		</div>
-		<!--
 		<div class="artist-wrap a2">
 			<div class="artist-info animating-a">
 			<div class="close" style = "left:0;"><img src = "icons/close.svg"></img></div>
@@ -36,7 +47,7 @@
 				<span class="venue">Venue and date</span>
 				<span class="discover-more"> discover more</span>
 			</div>
-			<div class="artist-pic animating-b"></div>
+			<div class="artist-pic animating-b" style = "background: url('images/'); background-size:cover; "></div>
 		</div>
 
 		<div class="artist-wrap a3">
@@ -47,42 +58,22 @@
 				<span class="venue">Venue and date</span>
 				<span class="discover-more"> discover more</span>
 			</div>
-			<div class="artist-pic animating-b"></div>
+			<div class="artist-pic animating-b" style = "background: url('images/'); background-size:cover; "></div>
 		</div>
-
-		<div class="artist-wrap a4">
-			<div class="artist-info animating-a">
-			<div class="close" style = "left:0;"><img src = "icons/close.svg"></img></div>
-				<span class="artist-desc">Random text</span>
-				<span class="artist-name">Artist's name</span>
-				<span class="venue">Venue and date</span>
-				<span class="discover-more"> discover more</span>
-			</div>
-			<div class="artist-pic animating-b"></div>
-		</div>
-		<div class="artist-wrap a4">
-			<div class="artist-info animating-a">
-			<div class="close" style = "left:0;"><img src = "icons/close.svg"></img></div>
-				<span class="artist-desc">Random text</span>
-				<span class="artist-name">Artist's name</span>
-				<span class="venue">Venue and date</span>
-				<span class="discover-more"> discover more</span>
-			</div>
-			<div class="artist-pic animating-b"></div>
-		</div>
-		-->
 	</div>
 	<div class="nav">
 		<span class="show-artists">Show Artists</span>
 		<div class="artist">
-			<span class="name" onclick = "slide(1)">Vishal - Shekhar</span>
+			<span class="name">	VISHAL - SHEKHAR</span>
+			<span class="name">SARTEK</span>
+			<span class="name">FREISHIA BOMANBEHRAM</span>
 		</div>
 	</div>
 
 	<div class = "scroll-progress incomplete"></div>
 	<div class = "scroll-progress complete"></div>
 
-	<div class="toolbar" style = "display: none;">
+	<div class="toolbar">
 		<span class="tools a">ARTISTS</span>
 		<span class="tools s">SCHEDULE</span>
 		<span class="tools c">CONTACT US</span>
@@ -91,7 +82,7 @@
 	<div class= "profshow"><center><span id = "prof-text">PROF SHOW</span></center></div>
 
 	
-	
+	<div class = "above" id = "artists"><img class = "artist-close" src = "icons/close.svg" style = "position:absolute;top:10vh;"></img></div>
 	<div class = "above" id = "schedule"><img class = "schedule-close" src = "icons/close.svg" style = "position:absolute;top:10vh;"></img></div>
 	<div class = "above" id = "contact-us"><img class = "contact-close" src = "icons/close.svg" style = "position:absolute;top:10vh;"></img></div>
 	
