@@ -263,7 +263,7 @@ $(document).ready(function(){
                         
                         var x = document.getElementsByClassName("artist-info")[counter+1];
                         x.style.animation = "scrollUpper 0.9s linear";
-                        x.addEventListener('animationend', function(){x.style.animation = ""; animationrunning=0; console.log(animationrunning)}, false);
+                        x.addEventListener('animationend', function(){x.style.animation = ""; animationrunning=0;}, false);
 
                         var y = document.getElementsByClassName("artist-pic")[counter+1];
                         y.style.animation = "scrollLower 0.9s linear";
@@ -280,9 +280,11 @@ $(document).ready(function(){
 
     });
 
+    var infoopen = 0;
     $('.artist-info').on('click',function(){
+    if(infoopen == 1){return false;}
 
-    if(screen.width >= 1025 || (window.matchMedia("(orientation: landscape)").matches)){
+    else if(screen.width >= 1025 || (window.matchMedia("(orientation: landscape)").matches)){
         this.style.height = "70vh";
         this.style.width = "48vw";
         this.style.top="10%";
@@ -291,13 +293,13 @@ $(document).ready(function(){
         infoPic.style.transform="translateY(-60vh)";
         infoPic.style.webkitTransform="translateY(-60vh)";
         infoPic.style.mozTransform="translateY(-60vh)";
-        var x = document.getElementsByClassName("close")[0];
-        x.style.display="block";
         animationrunning=-1;
 
         for(i=0;i<artistCount;i++){
-            document.getElementsByClassName("more-info")[i].style.display = "block";
-        }           
+            document.getElementsByClassName("close")[i].style.display = "block";
+            document.getElementsByClassName("more-info")[i].style.display = "block";    
+        }  
+        infoopen = 1;         
     }
     else{
         this.style.height = "50vh";
@@ -313,8 +315,10 @@ $(document).ready(function(){
         animationrunning=-1;
 
         for(i=0;i<artistCount;i++){
+            document.getElementsByClassName("close")[i].style.display = "block";
             document.getElementsByClassName("more-info")[i].style.display = "block";
         }
+        infoopen = 1;
     }
     });
 
@@ -324,6 +328,7 @@ $(document).ready(function(){
         if (e.stopPropagation) e.stopPropagation();
 
     if(screen.width >= 1025 || (window.matchMedia("(orientation: landscape)").matches)){
+        
         animationrunning=0;
         this.style.display="none";
         for(i=0;i<artistCount;i++)
@@ -337,7 +342,9 @@ $(document).ready(function(){
             y.style.mozTransform="translateY(0vh)";
 
             document.getElementsByClassName("more-info")[i].style.display = "none";
+            document.getElementsByClassName("close")[i].style.display = "none";
         }
+        infoopen = 0;
     }
     else{
         animationrunning=0;
@@ -353,12 +360,17 @@ $(document).ready(function(){
             y.style.mozTransform="translateY(0vh)";
 
             document.getElementsByClassName("more-info")[i].style.display = "none";
+            document.getElementsByClassName("close")[i].style.display = "none";
         }
+        infoopen = 0;
     }
     });
 
+
     $('.show-artists').on('click',function(){
         for(i=0,delay=0;i<artistCount;i++,delay+=0.1){
+            document.getElementsByClassName("name")[i].style.display = "block";
+
             document.getElementsByClassName("name")[i].style.webkitAnimation = "appear 0.4s ease-out forwards";
             document.getElementsByClassName("name")[i].style.webkitAnimationDelay = delay+"s";
 
@@ -371,19 +383,22 @@ $(document).ready(function(){
     });
 
     $('.name').on('click',function(){
-        this.id = "temp";
-        $('.name').css('color','#347f6c');
-        for(i=0;i<artistCount;i++){
-            if(document.getElementsByClassName("name")[i].id == "temp"){
-                break;
-            }
-        }
+        if(animationrunning<0){return false;}
 
-        $('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(i)},1000);
-        this.removeAttribute("id");
-        counter = i;
-        scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
-        document.getElementsByClassName("name")[i].style.color = "#70c5b0";
+        else
+        {this.id = "temp";
+                $('.name').css('color','#347f6c');
+                for(i=0;i<artistCount;i++){
+                    if(document.getElementsByClassName("name")[i].id == "temp"){
+                        break;
+                    }
+                }
+        
+                $('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(i)},1000);
+                this.removeAttribute("id");
+                counter = i;
+                scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
+                document.getElementsByClassName("name")[i].style.color = "#70c5b0";}
     }); 
 
     $('.a').on('click',function(){
@@ -409,5 +424,13 @@ $(document).ready(function(){
     $('.contact-close').on('click',function(){
         document.getElementById("contact-us").style.top = "-100vh";
     });
+
+    $('.artist-info').mousewheel(function(e,delta){
+        if(infoopen == 1){
+            for(i=0;i<artistCount;i++){
+                document.getElementsByClassName("artist-info")[i].scrollTop += (-delta*2);   
+            }
+        }
+    });
 });
-    
+

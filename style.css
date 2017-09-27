@@ -266,7 +266,8 @@ span,div{
 	
 	.name{
 		position:relative;
-		opacity:0;
+		opacity: 0;
+		display: none;
 		color:#347f6c;
 	}
 	
@@ -288,7 +289,21 @@ span,div{
 		transition:top 0.5s ease-out;
 	}
 
+	.navbar-schedule-list{
+		font-family:'i_light';
+		margin-top:15vh;
+		margin-left: 10vw;
+		list-style-position: inside;
+	}	
+	
+	.navbar-schedule-list li{
+		margin-top: 0.7vh;
+		font-size: 3.5vh;
+	}
 
+	.navbar-schedule-list li ul li{
+		font-size: 3vh;
+	}
 	
 	
 @media only screen and (min-width : 800px), screen and (orientation:landscape){
@@ -474,6 +489,10 @@ span,div{
 
 	}
 
+	.navbar-schedule-list{
+		margin-left: 36vw;
+	}
+
 }
 
 
@@ -513,6 +532,12 @@ span,div{
 	}
 
 	.name{
+		font-size: 80%;
+	}
+}
+
+@media only screen and (max-width:900px) and (orientation:landscape){
+	.artist{
 		font-size: 80%;
 	}
 }
