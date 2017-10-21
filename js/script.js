@@ -59,6 +59,9 @@ $(document).ready(function(){
                         b.style.animation = "scrollLower 0.9s linear reverse";
                         b.addEventListener('animationend', function(){b.style.animation = ""}, false);
                     counter--;
+
+                    $('.name').css('color','#347f6c');
+                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                     }
 
                     scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
@@ -97,6 +100,9 @@ $(document).ready(function(){
                         y.style.animation = "scrollLower 0.9s linear";
                         y.addEventListener('animationend', function(){y.style.animation = ""}, false);
                         counter++;
+
+                        $('.name').css('color','#347f6c');
+                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                     }
 
                     scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
@@ -146,6 +152,9 @@ $(document).ready(function(){
                         b.style.animation = "scrollLower 0.9s linear reverse";
                         b.addEventListener('animationend', function(){b.style.animation = ""}, false);
                 	counter--;
+
+                    $('.name').css('color','#347f6c');
+                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                 	}
                 scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";        	
         }
@@ -183,6 +192,9 @@ $(document).ready(function(){
                         y.style.animation = "scrollLower 0.9s linear";
                         y.addEventListener('animationend', function(){y.style.animation = ""}, false);
                 	counter++;
+
+                    $('.name').css('color','#347f6c');
+                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                 }
 
                 scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
@@ -231,6 +243,9 @@ $(document).ready(function(){
                         b.style.animation = "scrollLower 0.9s linear reverse";
                         b.addEventListener('animationend', function(){b.style.animation = ""}, false);
                 	counter--;
+
+                    $('.name').css('color','#347f6c');
+                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                 	}
                 scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
             break;
@@ -271,6 +286,9 @@ $(document).ready(function(){
 
 
                 	counter++;
+
+                    $('.name').css('color','#347f6c');
+                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                 }
 
                 scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
@@ -279,6 +297,97 @@ $(document).ready(function(){
     }
 
     });
+
+    $('.left-arrow').on('click',function(){
+        if(animationrunning<0){return false;}
+
+        else{
+            if(counter <= 0){return false;}
+
+                else{
+                    animationrunning--;
+                    
+                    $('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(counter-1)},1000);
+
+                    var a = document.getElementsByClassName("artist-info")[counter];
+                    a.style.webkitAnimation = "scrollUpper 0.9s linear reverse";                  
+                    a.addEventListener('webkitAnimationEnd', function(){a.style.webkitAnimation = ""; animationrunning=0;}, false);
+
+                    var b = document.getElementsByClassName("artist-pic")[counter];
+                    b.style.webkitAnimation = "scrollLower 0.9s linear reverse";
+                    b.addEventListener('webkitAnimationEnd', function(){b.style.webkitAnimation = ""}, false);
+
+                    var a = document.getElementsByClassName("artist-info")[counter];
+                        a.style.mozAnimation = "scrollUpper 0.9s linear reverse";
+                        a.addEventListener('mozAnimationEnd', function(){a.style.mozAnimation = ""; animationrunning=0;}, false);
+
+                        var b = document.getElementsByClassName("artist-pic")[counter];
+                        b.style.mozAnimation = "scrollLower 0.9s linear reverse";
+                        b.addEventListener('mozAnimationEnd', function(){b.style.mozAnimation = ""}, false);
+
+                        var a = document.getElementsByClassName("artist-info")[counter];
+                        a.style.animation = "scrollUpper 0.9s linear reverse";
+                        a.addEventListener('animationend', function(){a.style.animation = ""; animationrunning=0;}, false);
+
+                        var b = document.getElementsByClassName("artist-pic")[counter];
+                        b.style.animation = "scrollLower 0.9s linear reverse";
+                        b.addEventListener('animationend', function(){b.style.animation = ""}, false);
+                    counter--;
+
+                    $('.name').css('color','#347f6c');
+                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
+                    }
+                scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
+        }
+    });
+
+    $('.right-arrow').on('click',function(){
+        if(animationrunning<0){return false;}
+
+        else{
+            if(counter >= (artistCount-1)){return false;}
+
+                else{
+                    animationrunning--;
+
+                    $('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(counter+1)},1000);
+
+                    var x = document.getElementsByClassName("artist-info")[counter+1];
+                    x.style.webkitAnimation = "scrollUpper 0.9s linear";
+                    x.addEventListener('webkitAnimationEnd', function(){x.style.webkitAnimation = ""; animationrunning=0;}, false);
+
+                    var y = document.getElementsByClassName("artist-pic")[counter+1];
+                    y.style.webkitAnimation = "scrollLower 0.9s linear";
+                    y.addEventListener('webkitAnimationEnd', function(){y.style.webkitAnimation = ""}, false);
+
+                        var x = document.getElementsByClassName("artist-info")[counter+1];
+                        x.style.mozAnimation = "scrollUpper 0.9s linear";
+                        x.addEventListener('mozAnimationEnd', function(){x.style.mozAnimation = ""; animationrunning=0;}, false);
+
+                        var y = document.getElementsByClassName("artist-pic")[counter+1];
+                        y.style.mozAnimation = "scrollLower 0.9s linear";
+                        y.addEventListener('mozAnimationEnd', function(){y.style.mozAnimation = ""}, false);
+
+                        
+                        var x = document.getElementsByClassName("artist-info")[counter+1];
+                        x.style.animation = "scrollUpper 0.9s linear";
+                        x.addEventListener('animationend', function(){x.style.animation = ""; animationrunning=0;}, false);
+
+                        var y = document.getElementsByClassName("artist-pic")[counter+1];
+                        y.style.animation = "scrollLower 0.9s linear";
+                        y.addEventListener('animationend', function(){y.style.animation = ""}, false);
+
+
+                    counter++;
+
+                    $('.name').css('color','#347f6c');
+                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
+                }
+
+                scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
+        }
+    });
+
 
     var infoopen = 0;
     $('.artist-info').on('click',function(){
@@ -366,6 +475,12 @@ $(document).ready(function(){
     }
     });
 
+    document.addEventListener("click", function(){
+        if(!document.querySelectorAll(".artist-info")[counter].contains(event.target) && infoopen == 1){
+            document.querySelectorAll(".close")[counter].click();
+            infoopen = 0;
+        }
+    });//click outside to close the info
 
     $('.show-artists').on('click',function(){
         for(i=0,delay=0;i<artistCount;i++,delay+=0.1){
@@ -380,25 +495,29 @@ $(document).ready(function(){
             document.getElementsByClassName("name")[i].style.animation = "appear 0.4s ease-out forwards";
             document.getElementsByClassName("name")[i].style.animationDelay = delay+"s";
         }
+
+        document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
     });
 
     $('.name').on('click',function(){
         if(animationrunning<0){return false;}
 
         else
-        {this.id = "temp";
-                $('.name').css('color','#347f6c');
-                for(i=0;i<artistCount;i++){
-                    if(document.getElementsByClassName("name")[i].id == "temp"){
-                        break;
-                    }
+        {       
+            this.id = "temp";
+            $('.name').css('color','#347f6c');
+            for(i=0;i<artistCount;i++){
+                if(document.getElementsByClassName("name")[i].id == "temp"){
+                    break;
                 }
+            }
         
-                $('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(i)},1000);
-                this.removeAttribute("id");
-                counter = i;
-                scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
-                document.getElementsByClassName("name")[i].style.color = "#70c5b0";}
+            $('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(i)},1000);
+            this.removeAttribute("id");
+            counter = i;
+            scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
+            document.getElementsByClassName("name")[i].style.color = "#70c5b0";
+        }
     }); 
 
     $('.a').on('click',function(){
@@ -428,7 +547,7 @@ $(document).ready(function(){
     $('.artist-info').mousewheel(function(e,delta){
         if(infoopen == 1){
             for(i=0;i<artistCount;i++){
-                document.getElementsByClassName("artist-info")[i].scrollTop += (-delta*2);   
+                document.getElementsByClassName("artist-info")[i].scrollTop += (-delta*5);   
             }
         }
     });
