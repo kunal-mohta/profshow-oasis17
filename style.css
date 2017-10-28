@@ -184,7 +184,7 @@ span,div{
 
 .left-arrow{
 	position:fixed;
-	top: calc(85vh - 9vw);
+	top: calc(85.5vh - 10vw);
 	left:0vw;
 	height:20vw;
 	z-index:5;
@@ -192,7 +192,7 @@ span,div{
 
 .right-arrow{
 	position:fixed;
-	top: calc(85vh - 9vw);
+	top: calc(85.5vh - 10vw);
 	left:80vw;
 	height:20vw;
 	z-index:5;
@@ -208,8 +208,6 @@ span,div{
 	position: fixed;
 	width: 100%;
 	top: 6vh;
-	display: flex;
-	justify-content: space-around;
 	z-index:2;
 }
 
@@ -217,6 +215,9 @@ span,div{
 	align-self: center;
 	font-size: 3vh;
 	color: white;
+	position: fixed;
+	top: 4vh;
+	left: 60vw;
 }
 .tools:hover{
 	color:#347f6c;
@@ -225,7 +226,7 @@ span,div{
 .profshow{
 	background: rgba(128,128,128,.27);
 	width:100%;
-	height:26%;
+	height:40%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -295,7 +296,7 @@ span,div{
 		height:100vh;
 		width:100vw;
 		background:#57e7c7;
-		z-index:4;
+		z-index:5;
 		position:fixed;
 		top:-100vh;
 		transition:top 0.5s ease-out;
@@ -498,6 +499,9 @@ span,div{
 		opacity: 1;
 		color: white;
 		align-self: center;
+		position: fixed;
+		top: 4vh;
+		left: 84vw;
 
 	}
 
@@ -538,7 +542,7 @@ span,div{
 
 	.discover-more{
 		/*margin: -2% 5%;*/
-		font-size: 80%;
+		font-size: 100%;
 		font-family: 'i_light';
 		color: #8fa3a7;
 	}
@@ -549,16 +553,17 @@ span,div{
 
 	.left-arrow{
 		position:fixed;
-		top: calc(85vh - 3.5vw);
+		top: calc(85.7vh - 4vw);
 		left:12vw;
 		height:8vw;
 	}
 
 	.right-arrow{
 		position:fixed;
-		top: calc(85vh - 3.5vw);
+		top: calc(85.4vh - 4vw);
 		left:80vw;
 		height:8vw;
+
 	}	
 }
 
@@ -589,6 +594,6 @@ span,div{
   	}
 
   	.discover-more{
-  		font-size: 80%;
+  		font-size: 100%;
   	}
 }
