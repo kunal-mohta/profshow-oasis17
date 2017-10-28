@@ -243,6 +243,8 @@ span,div{
 .close{
 	display: none;	
 	transition:opacity 1s;
+	height:32px;
+	width:32px;
 }
 
 
