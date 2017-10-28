@@ -76,28 +76,28 @@ $(document).ready(function(){
                         $('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(counter+1)},1000);
 
                         var x = document.getElementsByClassName("artist-info")[counter+1];
-                        x.style.webkitAnimation = "scrollUpper 0.5s linear";
+                        x.style.webkitAnimation = "scrollUpper 0.9s linear";
                         x.addEventListener('webkitAnimationEnd', function(){x.style.webkitAnimation = ""; animationrunning=0;}, false);
 
                         var y = document.getElementsByClassName("artist-pic")[counter+1];
-                        y.style.webkitAnimation = "scrollLower 0.5s linear";
+                        y.style.webkitAnimation = "scrollLower 0.9s linear";
                         y.addEventListener('webkitAnimationEnd', function(){y.style.webkitAnimation = ""}, false);
 
                         var x = document.getElementsByClassName("artist-info")[counter+1];
-                        x.style.mozAnimation = "scrollUpper 0.5s linear";
+                        x.style.mozAnimation = "scrollUpper 0.9s linear";
                         x.addEventListener('mozAnimationEnd', function(){x.style.mozAnimation = ""; animationrunning=0;}, false);
 
                         var y = document.getElementsByClassName("artist-pic")[counter+1];
-                        y.style.mozAnimation = "scrollLower 0.5s linear";
+                        y.style.mozAnimation = "scrollLower 0.9s linear";
                         y.addEventListener('mozAnimationEnd', function(){y.style.mozAnimation = ""}, false);
 
 
                         var x = document.getElementsByClassName("artist-info")[counter+1];
-                        x.style.animation = "scrollUpper 0.5s linear";
+                        x.style.animation = "scrollUpper 0.9s linear";
                         x.addEventListener('animationend', function(){x.style.animation = ""; animationrunning=0;}, false);
 
                         var y = document.getElementsByClassName("artist-pic")[counter+1];
-                        y.style.animation = "scrollLower 0.5s linear";
+                        y.style.animation = "scrollLower 0.9s linear";
                         y.addEventListener('animationend', function(){y.style.animation = ""}, false);
                         counter++;
 
@@ -168,28 +168,28 @@ $(document).ready(function(){
                 	$('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(counter+1)},1000);
 
                 	var x = document.getElementsByClassName("artist-info")[counter+1];
-                	x.style.webkitAnimation = "scrollUpper 0.5s linear";
+                	x.style.webkitAnimation = "scrollUpper 0.9s linear";
                 	x.addEventListener('webkitAnimationEnd', function(){x.style.webkitAnimation = ""; animationrunning=0;}, false);
 
                 	var y = document.getElementsByClassName("artist-pic")[counter+1];
-                	y.style.webkitAnimation = "scrollLower 0.5s linear";
+                	y.style.webkitAnimation = "scrollLower 0.9s linear";
                 	y.addEventListener('webkitAnimationEnd', function(){y.style.webkitAnimation = ""}, false);
 
                         var x = document.getElementsByClassName("artist-info")[counter+1];
-                        x.style.mozAnimation = "scrollUpper 0.5s linear";
+                        x.style.mozAnimation = "scrollUpper 0.9s linear";
                         x.addEventListener('mozAnimationEnd', function(){x.style.mozAnimation = ""; animationrunning=0;}, false);
 
                         var y = document.getElementsByClassName("artist-pic")[counter+1];
-                        y.style.mozAnimation = "scrollLower 0.5s linear";
+                        y.style.mozAnimation = "scrollLower 0.9s linear";
                         y.addEventListener('mozAnimationEnd', function(){y.style.mozAnimation = ""}, false);
 
 
                         var x = document.getElementsByClassName("artist-info")[counter+1];
-                        x.style.animation = "scrollUpper 0.5s linear";
+                        x.style.animation = "scrollUpper 0.9s linear";
                         x.addEventListener('animationend', function(){x.style.animation = ""; animationrunning=0;}, false);
 
                         var y = document.getElementsByClassName("artist-pic")[counter+1];
-                        y.style.animation = "scrollLower 0.5s linear";
+                        y.style.animation = "scrollLower 0.9s linear";
                         y.addEventListener('animationend', function(){y.style.animation = ""}, false);
                 	counter++;
 
@@ -220,7 +220,7 @@ $(document).ready(function(){
                 	$('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(counter-1)},1000);
 
 
-                	var a = document.getElementsByClassNaartistCountme("artist-info")[counter];
+                	var a = document.getElementsByClassName("artist-info")[counter];
                 	a.style.webkitAnimation = "scrollUpper 0.5s linear reverse";
                 	a.addEventListener('webkitAnimationEnd', function(){a.style.webkitAnimation = ""; animationrunning=0;}, false);
 
@@ -261,28 +261,28 @@ $(document).ready(function(){
                 	$('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(counter+1)},1000);
 
                 	var x = document.getElementsByClassName("artist-info")[counter+1];
-                	x.style.webkitAnimation = "scrollUpper 0.5s linear";
+                	x.style.webkitAnimation = "scrollUpper 0.9s linear";
                 	x.addEventListener('webkitAnimationEnd', function(){x.style.webkitAnimation = ""; animationrunning=0;}, false);
 
                 	var y = document.getElementsByClassName("artist-pic")[counter+1];
-                	y.style.webkitAnimation = "scrollLower 0.5s linear";
+                	y.style.webkitAnimation = "scrollLower 0.9s linear";
                 	y.addEventListener('webkitAnimationEnd', function(){y.style.webkitAnimation = ""}, false);
 
                         var x = document.getElementsByClassName("artist-info")[counter+1];
-                        x.style.mozAnimation = "scrollUpper 0.5s linear";
+                        x.style.mozAnimation = "scrollUpper 0.9s linear";
                         x.addEventListener('mozAnimationEnd', function(){x.style.mozAnimation = ""; animationrunning=0;}, false);
 
                         var y = document.getElementsByClassName("artist-pic")[counter+1];
-                        y.style.mozAnimation = "scrollLower 0.5s linear";
+                        y.style.mozAnimation = "scrollLower 0.9s linear";
                         y.addEventListener('mozAnimationEnd', function(){y.style.mozAnimation = ""}, false);
 
 
                         var x = document.getElementsByClassName("artist-info")[counter+1];
-                        x.style.animation = "scrollUpper 0.5s linear";
+                        x.style.animation = "scrollUpper 0.9s linear";
                         x.addEventListener('animationend', function(){x.style.animation = ""; animationrunning=0;}, false);
 
                         var y = document.getElementsByClassName("artist-pic")[counter+1];
-                        y.style.animation = "scrollLower 0.5s linear";
+                        y.style.animation = "scrollLower 0.9s linear";
                         y.addEventListener('animationend', function(){y.style.animation = ""}, false);
 
 
@@ -354,28 +354,28 @@ $(document).ready(function(){
                     $('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(counter+1)},1000);
 
                     var x = document.getElementsByClassName("artist-info")[counter+1];
-                    x.style.webkitAnimation = "scrollUpper 0.5s linear";
+                    x.style.webkitAnimation = "scrollUpper 0.9s linear";
                     x.addEventListener('webkitAnimationEnd', function(){x.style.webkitAnimation = ""; animationrunning=0;}, false);
 
                     var y = document.getElementsByClassName("artist-pic")[counter+1];
-                    y.style.webkitAnimation = "scrollLower 0.5s linear";
+                    y.style.webkitAnimation = "scrollLower 0.9s linear";
                     y.addEventListener('webkitAnimationEnd', function(){y.style.webkitAnimation = ""}, false);
 
                         var x = document.getElementsByClassName("artist-info")[counter+1];
-                        x.style.mozAnimation = "scrollUpper 0.5s linear";
+                        x.style.mozAnimation = "scrollUpper 0.9s linear";
                         x.addEventListener('mozAnimationEnd', function(){x.style.mozAnimation = ""; animationrunning=0;}, false);
 
                         var y = document.getElementsByClassName("artist-pic")[counter+1];
-                        y.style.mozAnimation = "scrollLower 0.5s linear";
+                        y.style.mozAnimation = "scrollLower 0.9s linear";
                         y.addEventListener('mozAnimationEnd', function(){y.style.mozAnimation = ""}, false);
 
 
                         var x = document.getElementsByClassName("artist-info")[counter+1];
-                        x.style.animation = "scrollUpper 0.5s linear";
+                        x.style.animation = "scrollUpper 0.9s linear";
                         x.addEventListener('animationend', function(){x.style.animation = ""; animationrunning=0;}, false);
 
                         var y = document.getElementsByClassName("artist-pic")[counter+1];
-                        y.style.animation = "scrollLower 0.5s linear";
+                        y.style.animation = "scrollLower 0.9s linear";
                         y.addEventListener('animationend', function(){y.style.animation = ""}, false);
 
 
