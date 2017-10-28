@@ -408,6 +408,8 @@ $(document).ready(function(){
         for(i=0;i<artistCount;i++){
             document.getElementsByClassName("close")[i].style.display = "block";
             document.getElementsByClassName("more-info")[i].style.display = "block";
+            document.getElementsByClassName("discover-more")[i].style.display = "none";
+
         }
         infoopen = 1;
     }
@@ -427,6 +429,8 @@ $(document).ready(function(){
         for(i=0;i<artistCount;i++){
             document.getElementsByClassName("close")[i].style.display = "block";
             document.getElementsByClassName("more-info")[i].style.display = "block";
+            document.getElementsByClassName("discover-more")[i].style.display = "none";
+
         }
         infoopen = 1;
     }
@@ -453,6 +457,8 @@ $(document).ready(function(){
 
             document.getElementsByClassName("more-info")[i].style.display = "none";
             document.getElementsByClassName("close")[i].style.display = "none";
+            document.getElementsByClassName("discover-more")[i].style.display = "block";
+
         }
         infoopen = 0;
     }
@@ -471,6 +477,8 @@ $(document).ready(function(){
 
             document.getElementsByClassName("more-info")[i].style.display = "none";
             document.getElementsByClassName("close")[i].style.display = "none";
+            document.getElementsByClassName("discover-more")[i].style.display = "block";
+
         }
         infoopen = 0;
     }
