@@ -60,8 +60,8 @@ $(document).ready(function(){
                         b.addEventListener('animationend', function(){b.style.animation = ""}, false);
                     counter--;
 
-                    $('.name').css('color','#347f6c');
-                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
+                    // $('.name').css('color','#347f6c');
+                    // document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                     }
 
                     scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
@@ -101,8 +101,8 @@ $(document).ready(function(){
                         y.addEventListener('animationend', function(){y.style.animation = ""}, false);
                         counter++;
 
-                        $('.name').css('color','#347f6c');
-                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
+                    //     $('.name').css('color','#347f6c');
+                    // document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                     }
 
                     scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
@@ -153,8 +153,8 @@ $(document).ready(function(){
                         b.addEventListener('animationend', function(){b.style.animation = ""}, false);
                 	counter--;
 
-                    $('.name').css('color','#347f6c');
-                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
+                    // $('.name').css('color','#347f6c');
+                    // document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                 	}
                 scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
         }
@@ -193,8 +193,8 @@ $(document).ready(function(){
                         y.addEventListener('animationend', function(){y.style.animation = ""}, false);
                 	counter++;
 
-                    $('.name').css('color','#347f6c');
-                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
+                    // $('.name').css('color','#347f6c');
+                    // document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                 }
 
                 scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
@@ -219,7 +219,7 @@ $(document).ready(function(){
 
                 	$('#main-wrapper').animate({scrollLeft: ((mainWrapper.scrollWidth)/artistCount)*(counter-1)},1000);
 
-                	var a = document.getElementsByClassNaartistCountme("artist-info")[counter];
+                	var a = document.getElementsByClassName("artist-info")[counter];
                 	a.style.webkitAnimation = "scrollUpper 0.9s linear reverse";
                 	a.addEventListener('webkitAnimationEnd', function(){a.style.webkitAnimation = ""; animationrunning=0;}, false);
 
@@ -244,8 +244,8 @@ $(document).ready(function(){
                         b.addEventListener('animationend', function(){b.style.animation = ""}, false);
                 	counter--;
 
-                    $('.name').css('color','#347f6c');
-                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
+                    // $('.name').css('color','#347f6c');
+                    // document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                 	}
                 scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
             break;
@@ -287,8 +287,8 @@ $(document).ready(function(){
 
                 	counter++;
 
-                    $('.name').css('color','#347f6c');
-                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
+                    // $('.name').css('color','#347f6c');
+                    // document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                 }
 
                 scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
@@ -334,8 +334,8 @@ $(document).ready(function(){
                         b.addEventListener('animationend', function(){b.style.animation = ""}, false);
                     counter--;
 
-                    $('.name').css('color','#347f6c');
-                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
+                    // $('.name').css('color','#347f6c');
+                    // document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                     }
                 scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
         }
@@ -380,8 +380,8 @@ $(document).ready(function(){
 
                     counter++;
 
-                    $('.name').css('color','#347f6c');
-                    document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
+                //     $('.name').css('color','#347f6c');
+                //     document.getElementsByClassName("name")[counter].style.color = "#70c5b0";
                 }
 
                 scrollBar.style.width = ((60/(artistCount-1))*(counter))+"vw";
