@@ -223,7 +223,7 @@ span,div{
 	font-size: 3vh;
 	color: white;
 	position: fixed;
-	top: 4vh;
+	top: 2vh;
 	left: 60vw;
 }
 .tools:hover{
@@ -489,10 +489,10 @@ span,div{
 
 	.toolbar{
 		height: 10%;
-		width: 70%;
+		width: 20%;
 		background: #292b28;
 		top: 0vh;
-		left: 30%;
+		left: 80%;
 		position: fixed;
 	}
 
@@ -512,7 +512,7 @@ span,div{
 		color: white;
 		align-self: center;
 		position: fixed;
-		top: 4vh;
+		top: 2vh;
 		left: 84vw;
 
 	}
