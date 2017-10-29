@@ -531,14 +531,14 @@ span,div{
 
 	.artist-desc{
 		/*margin: 7% 5%;*/
-		font-size: 100%;
+		font-size: 140%;
 		font-family: 'i_light';
 		
 	}
 
 	.artist-name{
 		/*margin: 0% 5%;*/
-		font-size: 150%;
+		font-size: 190%;
 		font-family: 'i_light';
 		color: #70c5b0;
 		
@@ -547,14 +547,14 @@ span,div{
 	.venue{
 
 		/*margin: 3% 5%;*/
-		font-size: 100%;
+		font-size: 140%;
 		font-family: 'i_light';
 		
 	}
 
 	.discover-more{
 		/*margin: -2% 5%;*/
-		font-size: 100%;
+		font-size: 140%;
 		font-family: 'i_light';
 		color: #8fa3a7;
 	}
