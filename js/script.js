@@ -1,3 +1,4 @@
+document.documentElement.requestFullscreen();
 $(document).ready(function(){
 
 	var mainWrapper = document.getElementById("main-wrapper");
