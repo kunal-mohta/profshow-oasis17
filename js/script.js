@@ -1,4 +1,4 @@
-document.documentElement.webkitRequestFullscreen();
+window.onclick = function(){document.documentElement.webkitRequestFullscreen();}
 $(document).ready(function(){
 
 	var mainWrapper = document.getElementById("main-wrapper");
