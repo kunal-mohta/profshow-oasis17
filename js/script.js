@@ -115,6 +115,7 @@ $(document).ready(function(){
 	var x1;
 	document.body.addEventListener("touchstart", function(e){
         e.preventDefault();
+        window.scrollBy(0,100);
 		x1 = e.changedTouches[0].pageX;
 	}, false);
 
