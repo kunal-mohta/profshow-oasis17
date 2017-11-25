@@ -114,10 +114,12 @@ $(document).ready(function(){
 
 	var x1;
 	document.body.addEventListener("touchstart", function(e){
+        e.preventDefault();
 		x1 = e.changedTouches[0].pageX;
 	}, false);
 
     document.body.addEventListener("touchend", function(e){
+        e.preventDefault();
         var delta = e.changedTouches[0].pageX - x1;
         if(animationrunning<0){return false;}
 
