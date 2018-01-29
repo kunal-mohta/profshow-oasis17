@@ -7,6 +7,8 @@
 #### BITS Pilani, Pilani Campus
 
 ---
+Responsive Website for the [PROF SHOWS](https://bits-oasis.org/profshows/), which were held during [OASIS (2017)](https://bits-oasis.org/) - cultural festival of [BITS Pilani, Pilani Campus](http://www.bits-pilani.ac.in/)
+
 
 Front End Developers:
   * [Kunal Mohta](https://github.com/kunal-mohta)
